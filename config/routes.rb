@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/static_pages/contact', to: 'static_pages#contact'
   get '/static_pages/team', do: 'static_pages#team'
   get '/static_pages/home', do: 'static_pages#home'
-  get '/welcome/:id', to: 'static_pages#name'
-  get '/gossip/:id', to: 'static_pages#gossip'
-  get '/user/:id', to: 'static_pages#user'
+  get '/static_pages/welcome/:id', to: 'static_pages#name'
+  get '/static_pages/gossip/:id', to: 'static_pages#gossip'
+  get '/static_pages/user/:id', to: 'static_pages#user'
 end
