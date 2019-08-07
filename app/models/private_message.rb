@@ -1,4 +1,4 @@
 class PrivateMessage < ApplicationRecord
-    belongs_to :user
-    has_many :gossips
+    belongs_to :sender, class_name: "User"
+    belongs_to :recipient, class_name: "User"
 end
