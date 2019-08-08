@@ -44,36 +44,34 @@
           
           <!-- Navbar -->
           <!-- Full Page Intro -->
-          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed">
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed">
             <!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
               <!-- barre de ligne -->
               <div class="text-center mt-4">
-              
-                          <hr class="hr-light mb-3 mt-4">
+                    <hr class="hr-light mb-3 mt-4">
                <!--Liste des Gossips-->
                 <button class="btn btn-indigo"><font color="#ee7614" face="Alyanda" size="12" >~  Liste des Potins  ~</font></button>
-                    <div class="potin" style="display: flex; flex-wrap: wrap; padding-top: 100px">
-                        <% @gossips.each do |gossip| %>
-                            <font face="lucida calligraphy">
-                                <div class="#" style="width: 20rem;">
-                                    <div class="card">
-                                    <%= User.find(gossip.user_id).first_name %>
-                                    <%= User.find(gossip.user_id).last_name %>  </div>
-                                        <div class="">
-                                    <!--lien des gossips-->
-                                            <h4 class="card-link"> 
-                                            <%= link_to "#{gossip.title}", "gossip/#{gossip.id}" %> 
-                                            </h4>
-                                        </div>
-                                </div>
-                            </font>
-                        <% end %>
-                    </div>
-                  
+                <div class="potin" style="display: flex; flex-wrap: wrap; padding-top: 100px">
+                    <% @gossips.each do |gossip| %>
+                        <font face="lucida calligraphy">
+                            <div class="#" style="width: 20rem;">
+                                <div class="card">
+                                <%= User.find(gossip.user_id).first_name %>
+                                <%= User.find(gossip.user_id).last_name %>  </div>
+                                    <div class="">
+                                <!--lien des gossips-->
+                                        <h4 class="cardlink"> 
+                                        <%= link_to "#{gossip.title}", "gossip/#{gossip.id}" %> 
+                                        </h4>
+                                    </div>
+                            </div>
+                        </font>
+                    <% end %>
+                </div>
             </div>
             <!-- Mask & flexbox options-->
-          </div>
+        </div>
           <!-- Full Page Intro -->
         
         <!-- Main navigation -->
