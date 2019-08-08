@@ -7,54 +7,78 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <title>Gossip_view</title>
+            <title>🦊 Gossip_view</title>
     </head>
 
     <body>
-    <!--NavBar-->
-    <div align= "center">
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="/static_pages/home">Home</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="/static_pages/contact">Contact<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/static_pages/team">Team</a>
-        </li>
-    </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-</div>
-</nav>
-
-    <h1><font face="chilanka">Welcoming page</h1>
-
-    <!--Liste des Gossips-->
-        <div class="#" style="display: flex; flex-wrap: wrap; padding-top: 100px">
-            <% @gossips.each do |gossip| %>
-                <font face="lucida calligraphy">
-                    <div class="#" style="width: 20rem;">
-                        <div class="#">
-                        <%= User.find(gossip.user_id).first_name %>
-                        <%= User.find(gossip.user_id).last_name %>  </div>
-                            <div class="#">
-                        <!--lien des gossips-->
-                                <h4 class="#"> 
-                                <%= link_to "#{gossip.title}", "gossip/#{gossip.id}" %> 
-                                </h4>
-                            </div>
+       
+          <!-- Navbar --> 
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <strong>THP-5</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="/static_pages/home">Home<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/static_pages/team">Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/static_pages/contact">Contact</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          
+          <!-- Navbar -->
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- barre de ligne -->
+              <div class="text-center mt-4">
+              
+                          <hr class="hr-light mb-3 mt-4">
+               <!--Liste des Gossips-->
+                <button class="btn btn-indigo"><font color="#ee7614" face="Alyanda" size="12" >~  Liste des Potins  ~</font></button>
+                    <div class="potin" style="display: flex; flex-wrap: wrap; padding-top: 100px">
+                        <% @gossips.each do |gossip| %>
+                            <font face="lucida calligraphy">
+                                <div class="#" style="width: 20rem;">
+                                    <div class="card">
+                                    <%= User.find(gossip.user_id).first_name %>
+                                    <%= User.find(gossip.user_id).last_name %>  </div>
+                                        <div class="">
+                                    <!--lien des gossips-->
+                                            <h4 class="card-link"> 
+                                            <%= link_to "#{gossip.title}", "gossip/#{gossip.id}" %> 
+                                            </h4>
+                                        </div>
+                                </div>
+                            </font>
+                        <% end %>
                     </div>
-                </font>
-            <% end %>
-        </div>
+                  
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        
+        <!-- Main navigation -->
+        <!--Main Layout-->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

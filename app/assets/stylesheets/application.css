@@ -1,18 +1,90 @@
+/*body style*/
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+@media (min-width: 800px) and (max-width: 1000px)  
+{
+  html,
+  body,
+  header,
+}
+
+.top-nav-collapse {
+  background-color: #313236 !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #272830 !important;
+  }
+}
+
+.rgba-gradient {
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+  background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+}
+/*link CSS*/
+a{
+  text-decoration: none;
+  color: rgb(125, 212, 24);
+}
+a:hover{
+  color: rgb(0, 238, 255);
+}
+.md-form label {
+  color: #000000;
+}
+
+h6 {
+  line-height: 1.7;
+}
 /*element User*/
 body{
-    background-color: rgb(94, 91, 91)
+    background-color: rgb(3, 3, 3);
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
 }
 h1.display-3{
-    color: rgb(226, 153, 43);
+    color: #faa83c;
     text-align: center;
+    font-family: chilanka;
 }
 p.lead{
-    color:white;
+    color:rgb(255, 255, 255);
 }
 p.lien{
-  color: white;
+  color: lightblue;
 }
 /*ligne color*/
 hr.my-4{
-  color:rgb(226, 153, 43);
+  color:rgb(226, 153, 43); 
 }
+div.potin{
+  margin: auto;
+  padding: auto;
+}
+div.card{
+  background: transparent !important;
+  margin-left: 40px;
+  margin: center;
+  border-color: #4afff0;
+  color: rgb(74, 255, 240);
+  font-family: Chilanka;
+  border-style: inset;                                                                       
+}
+.test{
+  color:#ee7614;
+}
+
+
