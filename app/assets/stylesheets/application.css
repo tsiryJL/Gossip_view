@@ -73,9 +73,7 @@ p.lead{
     color:rgb(255, 255, 255);
   }
 
-p.lien{
-  color: lightblue;
-}
+div.lien{}
 
 /*ligne color*/
 hr.my-4{
@@ -135,4 +133,7 @@ svg {
 #barre{
     margin-left: 05%;
     margin-top: 5%;
+}
+#BtnReturn{
+  text-decoration-color: bisque;
 }

@@ -18,8 +18,11 @@
     <!--age-->  
         <font color="lightgreen" face="Purisa">. Age </font>: &nbsp;  
             <%= User.find(params[:id]).age %> years old 
-    </p>
+    <br>
+        <font color="lightgreen" face="Purisa">. City </font>: &nbsp;  
+            <%= City.find(params[:id]).name %> 
+   
     <hr class="my-4">
-       
+</p>  
         <center><p class="lead"> <%= User.find(params[:id]).description %> </p></center>
 </div>

@@ -5,8 +5,9 @@
           <p class="lead"> Contenue : <%= Gossip.find(params[:id]).content %> </p>
             <hr class="my-4">
       
-          <p class="lien">
+          <p>
               <center><%= link_to "Voir le profil !!", "../user/#{Gossip.find(params[:id]).user_id}" %></center>
           </p>
   </div>
+    <p><a href="<%= static_pages_index_path %>" class="btn btn-primary"> Retour </a></p>
 </body>
