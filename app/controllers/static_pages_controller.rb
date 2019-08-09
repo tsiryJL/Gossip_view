@@ -1,11 +1,7 @@
 class StaticPagesController < ApplicationController
-  def home
+
+  def index
     @gossips = Gossip.all
   end
-
-  def contact
-  end
-
-  def team
-  end
+  
 end

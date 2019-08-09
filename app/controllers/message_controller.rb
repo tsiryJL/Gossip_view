@@ -5,4 +5,11 @@ class MessageController < ApplicationController
     puts  params[:user_entry]
     puts "$" * 60
   end
+
+  def edit
+    puts "$" * 60
+    puts "ceci est le contenu de params :"
+    puts params
+    puts "$" * 60
+  end
 end

@@ -56,7 +56,8 @@ h6 {
 
 /*element User*/
 body{
-    background-color: rgb(3, 3, 3);
+    background: url('wall.jpg');
+    background-repeat: none;
     margin-bottom: 100px;
     margin-top: 100px;
     margin-right: 150px;
@@ -126,7 +127,12 @@ svg {
     font-family: Chilanka;
     padding-top: 10%;
 }
-
-
-
-
+#potin{
+    color:#ee7614 ;
+    font-family: Alyanda ;
+    font-size: 05px;
+}
+#barre{
+    margin-left: 05%;
+    margin-top: 5%;
+}

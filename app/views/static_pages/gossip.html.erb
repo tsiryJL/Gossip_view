@@ -1,19 +1,12 @@
-<div align="left">
-<div class="jumbotron">
-<!--recuperation des données sur id-->
-    <h1 class="display-3">Titre : <%= Gossip.find(params[:id]).title %> </h1>
-        <p class="lead"> Contenue : <%= Gossip.find(params[:id]).content %> </p>
-          <hr class="my-4">
-        <p>
-            <font color="lightgreen" face="Purisa">First Name :  </font> 
-            <font color="white">
-                <%= User.find(Gossip.find(params[:id]).user_id).first_name %>
-            <br>
-            <font color="lightgreen" face="Purisa">Last Name :  </font>  
-                <%= User.find(Gossip.find(params[:id]).user_id).last_name %> 
-            
-        </p>
-        <p class="lien">
-            <center><%= link_to "Voir le profil !!", "../user/#{Gossip.find(params[:id]).user_id}" %></center>
-        </p>
-</div>
+<body>
+  <div class="jumbotron">
+  <!--recuperation des données sur id-->
+      <h1 class="display-3">Titre : <%= Gossip.find(params[:id]).title %> </h1>
+          <p class="lead"> Contenue : <%= Gossip.find(params[:id]).content %> </p>
+            <hr class="my-4">
+      
+          <p class="lien">
+              <center><%= link_to "Voir le profil !!", "../user/#{Gossip.find(params[:id]).user_id}" %></center>
+          </p>
+  </div>
+</body>

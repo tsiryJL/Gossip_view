@@ -1,10 +1,25 @@
 <div class="jumbotron">
     <h1 class="display-3"><%= User.find(params[:id]).first_name %> <%= User.find(params[:id]).last_name %></h1>
-        <p class="lead"> <%= User.find(params[:id]).description %> </p>
-    <hr class="my-4">
-        <font color="white" face="Purisa"><p>. Email </font>:<font color="lightblue">:&nbsp;  
-            <%= User.find(params[:id]).email %> </p>
-        <font color="white" face="Purisa"><p>. Age </font>: &nbsp;  
-            <%= User.find(params[:id]).age %> years old </p>
+        <hr class="my-4">
+   <!--first name-->  
+    <font color="lightgreen" face="Purisa">. First Name :  </font> 
+        <font color="white">
+            <%= User.find(params[:id]).first_name %>
+        <br>
+    <!--last name-->  
+    <font color="lightgreen" face="Purisa">. Last Name :  </font>  
+            <%= User.find(params[:id]).last_name %> 
+    <!--email-->  
+    <br>   
+    <font color="lightgreen" face="Purisa">. Email : </font>
+        <font color="white">&nbsp;  
+            <%= User.find(params[:id]).email %> 
+    <br>
+    <!--age-->  
+        <font color="lightgreen" face="Purisa">. Age </font>: &nbsp;  
+            <%= User.find(params[:id]).age %> years old 
     </p>
+    <hr class="my-4">
+       
+        <center><p class="lead"> <%= User.find(params[:id]).description %> </p></center>
 </div>
