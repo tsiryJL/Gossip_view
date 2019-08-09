@@ -6,17 +6,6 @@ header,
   height: 100%;
 }
 
-@media (min-width: 800px) and (max-width: 1000px)  
-{
-  html,
-  body,
-  header,
-}
-
-.top-nav-collapse {
-  background-color: #313236 !important;
-}
-
 .navbar:not(.top-nav-collapse) {
   background: transparent !important;
 }
@@ -72,8 +61,6 @@ h1.display-3{
 p.lead{
     color:rgb(255, 255, 255);
   }
-
-div.lien{}
 
 /*ligne color*/
 hr.my-4{
@@ -136,4 +123,21 @@ svg {
 }
 #BtnReturn{
   text-decoration-color: bisque;
+}
+
+#Ntitre{
+  font-family: purisa;
+}
+body.text-center{
+  color: rgb(4, 205, 255);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 25%;
+}
+
+label.Text-Form{
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  font-family: Purisa;
 }

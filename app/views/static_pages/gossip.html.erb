@@ -1,13 +1,16 @@
-<body>
-  <div class="jumbotron">
+<div class="jumbotron">
   <!--recuperation des données sur id-->
       <h1 class="display-3">Titre : <%= Gossip.find(params[:id]).title %> </h1>
           <p class="lead"> Contenue : <%= Gossip.find(params[:id]).content %> </p>
             <hr class="my-4">
-      
-          <p>
-              <center><%= link_to "Voir le profil !!", "../user/#{Gossip.find(params[:id]).user_id}" %></center>
-          </p>
-  </div>
-    <p><a href="<%= static_pages_index_path %>" class="btn btn-primary"> Retour </a></p>
-</body>
+
+    <!--Editer boutton-->
+              <%= link_to "Editer", edit_gossip_path %> 
+            <br>
+    <!--voir profil boutton-->
+              <%= link_to "Voir le profil !!", "../user/#{Gossip.find(params[:id]).user_id}" %>
+            <br>
+    <!--Return button-->
+              <a href="<%= static_pages_index_path %>" class="btn btn-primary"> Retour </a>
+</div>
+

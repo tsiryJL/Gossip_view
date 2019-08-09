@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <!-- Required meta tags -->
+<!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <title>🦊 Gossip_view</title>
     </head>
@@ -13,10 +13,10 @@
     <body>
       <main role="main">
         <div class="form-inline my-2 my-lg-0">
-          <!-- Navbar -->
+<!-- Navbar -->
           <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="barre">
               <a class="navbar-brand" href="#">
-                <strong>THP-5</strong>
+                <strong><i>THP-5</i></strong>
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,13 +24,20 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
+<!--Home button-->                  
                     <a class="nav-link" href="/static_pages/index">Home<span class="sr-only">(current)</span></a>
                   </li>
+<!--Team button-->                  
                   <li class="nav-item">
                     <a class="nav-link" href="/static_pages/team">Team</a>
                   </li>
+<!--Contact button-->                  
                   <li class="nav-item">
                     <a class="nav-link" href="/static_pages/contact">Contact</a>
+                  </li>
+<!--Create button-->
+                  <li class="nav-item">
+                    <a class="nav-link" href="<%= new_gossip_path %>">Create Potin</a>
                   </li>
                 </ul>
                 <form class="form-inline">
@@ -42,19 +49,19 @@
           </nav>
         </main>
       </div>
-          <!-- Navbar -->
-          <!-- Full Page Intro -->
+<!-- Navbar -->
+<!-- Full Page Intro -->
         <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; height: auto ; >
             
             <div class="mask rgba-gradient align-items-center">
-              <!-- barre de ligne -->
+<!-- barre de ligne -->
               <div class="text-center mt-4">
                     <hr class="hr-light mb-3 mt-4">
-               <!--Liste des Gossips-->
+<!--Liste des Gossips-->
     <div class="container-fluid">
-        <!-- Mask & flexbox options-->
+<!-- Mask & flexbox options-->
             <div class="mask rgba-gradient align-items-center">
-              <!-- barre de ligne -->
+<!-- barre de ligne -->
               <div class="text-center mt-4">
                           <hr class="hr-light mb-3 mt-4">
        
@@ -67,7 +74,7 @@
                                 <%= User.find(gossip.user_id).first_name %>
                                 <%= User.find(gossip.user_id).last_name %>  </div>
                                     <div class="#">
-                                <!--lien des gossips-->
+<!--lien des gossips-->
                                         <h4 class="card-body"> 
                                           <%= link_to "#{gossip.title}", "gossip/#{gossip.id}" %> 
                                         </h4>
