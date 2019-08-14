@@ -5,7 +5,8 @@ class GossipsController < ApplicationController
     end
     
     def create
-        gossip = Gossip.create(gossip_params)
+        @gossip = Gossip.create(gossip_params)
+        @gossip.save
             redirect_to static_pages_index_path
     end
 
