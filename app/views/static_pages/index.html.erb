@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <title>🦊 Gossip_view</title>
+    </head>
+
+    <body>
+ 
+<!-- Full Page Intro -->
+        <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; height: auto ; >
+            
+            <div class="mask rgba-gradient align-items-center">
+<!-- barre de ligne -->
+              <div class="text-center mt-4">
+                    <hr class="hr-light mb-3 mt-4">
+<!--Liste des Gossips-->
+    <div class="container-fluid">
+<!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+<!-- barre de ligne -->
+              <div class="text-center mt-4">
+                          <hr class="hr-light mb-3 mt-4">
+       
+                <button class="btn btn-indigo" id="potins"><font color="#ee7614" face="Magiera" size="12" >~  Liste des Potins  ~</font></button>
+                <div class="potin" style="display: flex; flex-wrap: wrap; padding-top: 100px">
+                    <% @gossips.each do |gossip| %>
+                        <font face="lucida calligraphy">
+                            <div class="#" style="width: 20rem;">
+                                <div class="card">
+                                <%= User.find(gossip.user_id).first_name %>
+                                <%= User.find(gossip.user_id).last_name %>  </div>
+                                    <div class="#">
+<!--lien des gossips-->
+                                        <h4 class="card-body"> 
+                                          <%= link_to "#{gossip.title}", "gossip/#{gossip.id}" %> 
+                                        </h4>
+                                    </div>
+                            </div>
+                        </font>
+                    <% end %>
+                </div>
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+    </div>
+          <!-- Full Page Intro -->
+        
+        <!-- Main navigation -->
+        <!--Main Layout-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+   
+
+

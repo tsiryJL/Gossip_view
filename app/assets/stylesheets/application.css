@@ -1,0 +1,144 @@
+/*body style*/
+html,
+body,
+header,
+.view {
+  height: 100%;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 991px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #272830 !important;
+  }
+}
+
+.rgba-gradient {
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%));
+  background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+}
+
+/*link CSS*/
+a{
+  text-decoration: none;
+  transition: background-size .2s;
+  text-decoration: none;
+  color: rgb(125, 212, 24);
+}
+
+a:hover{
+  color: rgb(0, 238, 255);
+  background-size: 4px 50px;
+  
+}
+.md-form label {
+  color: #000000;
+}
+
+h6 {
+    line-height: 1.7;
+   }
+
+/*element User*/
+body{
+    background: url('wall.jpg');
+    background-repeat: none;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    }
+
+h1.display-3{
+    color: #faa83c;
+    text-align: center;
+    font-family: chilanka;
+  }
+p.lead{
+    color:rgb(255, 255, 255);
+  }
+
+/*ligne color*/
+hr.my-4{
+  color:rgb(226, 153, 43); 
+}
+
+div.potin{
+  margin: auto;
+  padding: auto;
+}
+
+div.card{
+  background: transparent !important;
+  margin-left: 40px;
+  margin: center;
+  border-color: #4afff0;
+  color: rgb(74, 255, 240);
+  font-family: Chilanka;
+  border-style: inset;                                                                       
+}
+
+.test{
+  color:#18b8be;
+}
+/*animation*/
+
+svg {
+  width: 100%;
+}
+
+.squiggle {
+  animation:shift 1s linear infinite;
+}
+
+@keyframes shift {
+  from { transform:translateX(0); }
+  to { transform:translateX(-20px); }
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+#welcome{
+    color: rgb(60, 222, 228);
+    font-size: 100px;
+    font-family: Chilanka;
+    padding-top: 10%;
+}
+#potin{
+    color:#ee7614 ;
+    font-family: Alyanda ;
+    font-size: 05px;
+}
+#barre{
+    margin-left: 05%;
+    margin-top: 5%;
+}
+#BtnReturn{
+  text-decoration-color: bisque;
+}
+
+#Ntitre{
+  font-family: Magiera;
+}
+body.text-center{
+  color: rgb(4, 205, 255);
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 25%;
+  margin-top: 5%;
+}
+
+label.Text-Form{
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+  font-family: Purisa;
+}
